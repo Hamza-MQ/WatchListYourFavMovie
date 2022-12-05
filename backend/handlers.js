@@ -34,7 +34,7 @@ const getWatchlist = async(req, res) => {
       console.log(err.stack)
       client.close();
       console.log("disconnected!");
-      return res.status(500).json({ status: 500, message: err.message });
+      return res.status(500).json({ status: 500, message:[] });
   }
 
 };

@@ -8,7 +8,7 @@ const {getAllMovies, getMoviesBySearch, getMovieById, getWatchlist
 ,addMovie,deleteMovie, updateMovie,getActorById
 } = require("./handlers");
 
-let port = process.env.PORT || 7005
+let port = process.env.PORT || 7002
 express()
 
 
@@ -51,4 +51,4 @@ express()
 
 
 // Node spins up our server and sets it to listen on port 8000.
-.listen(port, () => console.log(`Listening on port 7005`));
+.listen(port, () => console.log(`Listening on port 7002`));

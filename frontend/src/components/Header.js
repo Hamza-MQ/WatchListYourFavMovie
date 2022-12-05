@@ -4,20 +4,7 @@ import { NavLink, Link } from "react-router-dom";
 
 const Header = ({ watchlist}) => {
 
-  
 
-    // useEffect(() => {
-    //     // TODO: GET all flight numbers
-    //     fetch("/api/get-flights")
-    //     .then(res => res.json())
-    //     .then((data) => {
-    //         if(data.status === 201){
-    //             setFlightNumbers(data.data)
-    //         }else{
-    //             console.log("not found")
-    //         }
-    //     })
-    // }, []);
 
     return (
         <Wrapper>
@@ -28,7 +15,8 @@ const Header = ({ watchlist}) => {
             </Container>
             <Nav>
                 <>
-                    <div className="bubble">{watchlist ? watchlist.data.length : 0}</div>
+                {console.log(watchlist)}
+                    <div className="bubble">{watchlist === null ? 0: watchlist.data.length}</div>
                     <StyledNavLink to="/watchlist">Watchlist</StyledNavLink>
                 </>
             </Nav>
